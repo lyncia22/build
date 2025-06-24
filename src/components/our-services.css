@@ -1,0 +1,65 @@
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  align-items: center;
+}
+p.section-description {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  .images-row {
+    flex-direction: row;
+  }
+  
+  .images-row img {
+    max-width: 100%;
+  }
+}
+/* Container to align button right */
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-top: 20px; space above button */
+}
+
+
+.learnmore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #FEB300;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.learnmore-text {
+  padding: 8px 20px;
+  background: white;
+  border-radius: 8px;
+  color: #FEB300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  width: 120px; /* Adjusted width for "Learnmore" text */
+  line-height: 100%;
+}
+
+.learnmore-arrow-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #FEB300;
+  border-radius: 8px;
+}

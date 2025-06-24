@@ -1,0 +1,119 @@
+.testimonials {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.testimonial-slider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 12px 0;
+  max-width: 400px;
+  width: 100%;
+  border: 3px solid orange;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.6s ease;
+  opacity: 0.7;
+  transform: scale(0.95);
+  
+}
+
+.testimonial-card.active {
+  border-image: linear-gradient(45deg, #FEB300, #ff00cc, #00f2ff) 1;
+  border-width: 3px;
+  border-style: solid;
+  opacity: 1;
+  transform: scale(1.05);
+  animation: gradientRotate 5s linear infinite;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #FEB300;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-name {
+  color: #FEB300;
+  font-weight: 600;
+}
+
+/* Animate the gradient */
+@keyframes gradientRotate {
+  0% {
+    border-image-source: linear-gradient(45deg, #FEB300, #ff00cc, #00f2ff);
+  }
+  50% {
+    border-image-source: linear-gradient(135deg, #00f2ff, #FEB300, #ff00cc);
+  }
+  100% {
+    border-image-source: linear-gradient(225deg, #ff00cc, #00f2ff, #FEB300);
+  }
+}
+
+.learnmore-btn {
+  display: inline-flex;
+  align-items: center;
+  /* gap: 8px; */
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #FEB300;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.learnmore-text {
+  padding: 8px 20px;
+  background: white;
+  border-radius: 8px;
+  color: #FEB300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  width: 120px; /* Adjusted width for "Learnmore" text */
+  line-height: 100%;
+}
+
+.learnmore-arrow-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #FEB300;
+  border-radius: 8px;
+}

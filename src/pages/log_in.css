@@ -1,0 +1,132 @@
+/* Full-page login background container */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/login.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark overlay on background */
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none; /* So clicks pass through to the card */
+}
+
+/* Card container on top */
+.login-card {
+  position: relative; /* So it sits above overlay */
+  z-index: 1;
+
+  display: flex;
+  width: 800px;
+  height: 400px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Left side of card with brand color and text */
+.login-left {
+  flex: 1;
+  background: #feb300; /* Brand orange */
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.login-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.login-left p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Right side form container */
+.login-form {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+/* Form labels */
+.login-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Inputs */
+.login-form input {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #feb300;
+  outline: none;
+}
+
+/* Submit button */
+.login-form button {
+  padding: 14px 0;
+  background: #feb300;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #e6a500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  
+  .login-left, .login-form {
+    flex: none;
+    width: 100%;
+  }
+  
+  .login-left {
+    padding: 30px;
+  }
+  
+  .login-form {
+    padding: 30px;
+  }
+}

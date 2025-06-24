@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ff6600; /* Orange logo */
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff6600; 
+}
+
+.navbar-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 0.5rem 2.7rem 0.5rem 1rem; /* right-side padding for icon */
+  border: 2px solid #FEB300;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.navbar-search input:focus {
+  border-color: #FEB300;
+  box-shadow: 0 0 0 2px rgba(254, 179, 0, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  nav-left: 10px;
+  color: #FEB300;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
