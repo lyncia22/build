@@ -1,7 +1,7 @@
 /* Experience Section Container */
 .experience-section {
   width: 100%;
-  background-color: white;
+  background-color: white; /* 🟨 Background: White */
   padding: 4rem 2rem;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
@@ -47,14 +47,14 @@
 .highlight {
   font-size: 65px;
   font-weight: 600;
-  color: #FEB300;
+  color: #FEB300; /* 🟧 Orange highlight for years */
   line-height: 1;
 }
 
 .years-text {
   font-size: 20px;
   font-weight: 300;
-  color: black;
+  color: black; /* ⚫ Black text for "Years Experience" */
   width: 100px;
   position: relative;
   top: -30px;
@@ -67,7 +67,6 @@
   padding: 1rem;
 }
 
-
 .why-choose-us {
   display: flex;
   flex-direction: column;
@@ -78,7 +77,7 @@
 
 .why-choose-us h4 {
   font-size: 15px;
-  color: #000;
+  color: #000; /* ⚫ Subheading text */
   display: flex;
   align-items: center;
 }
@@ -86,18 +85,18 @@
 .why-choose-us h2 {
   font-size: 30px;
   line-height: 1.4;
-  color: #000;
+  color: #000; /* ⚫ Heading text */
   margin: 0;
 }
 
 .why-choose-us h2 span {
-  color: #FEB300;
+  color: #FEB300; /* 🟧 Orange highlight inside headings */
 }
 
 .why-choose-us p {
   font-size: 20px;
   line-height: 1.6;
-  color: #000;
+  color: #000; /* ⚫ Paragraphs */
   margin: 0;
 }
 
@@ -114,11 +113,11 @@
   align-items: center;
   font-size: 20px;
   line-height: 1.5;
-  color: #000;
+  color: #000; /* ⚫ Feature text */
   font-weight: 400;
 }
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .experience-container {
     flex-direction: column;
@@ -147,46 +146,49 @@
   }
 }
 
+/* Learn More Button Styles */
 .learnm-btn {
   display: inline-flex;
   align-items: center;
   padding: 0;
-  /* background: transparent; */
-  border: none;
-  cursor: pointer;
-  background-color: white;
+  background-color: white;          /* 🟨 Button background */
+  border: 2px solid #FEB300;        /* 🟧 Orange border */
   border-radius: 8px;
-  border: 2px solid #FEB300;
-  height: 45px; /* smaller overall button height */
-  width: 145px; /* Adjusted width for "Learn More" text */
+  height: 45px;
+  width: 140px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .learnm-text {
-  padding: 6px 14px; /* smaller padding */
-  background: white;
-  border-radius: 6px;
-  color: #FEB300;
+  padding: 6px 14px;
+  background: white;                /* 🟨 Text background */
+  color: #FEB300;                   /* 🟧 Text color */
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 14px; /* slightly smaller font */
+  font-size: 14px;
   line-height: 1;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  white-space: nowrap;
 }
 
 .learnm-arrow-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 39px;  /* smaller width */
-  height: 42px; /* smaller height */
-  background: #FEB300;
-  border-radius: 6px;
+  width: 37px;
+  height: 41px;
+  background: #FEB300;              /* 🟧 Arrow box */
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
   position: relative;
-  bottom: -0.5px;
+  bottom: -0.43px;
 }
 
 .learnm-arrow-icon {
   transform: rotate(-45deg);
-  stroke: black;
+  stroke: black;                    /* ⚫ Arrow icon */
   width: 19px;
   height: 19px;
 }
