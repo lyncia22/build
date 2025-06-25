@@ -1,6 +1,6 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px;
+  padding: 12px 24px;
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   font-family: 'Poppins', sans-serif;
@@ -17,15 +17,13 @@
 .navbar-logo {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #ff6600; /* Orange logo */
+  color: #ff6600;
 }
 
 .navbar-links {
   display: flex;
   list-style: none;
   gap: 2rem;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
 }
 
 .navbar-links a {
@@ -36,36 +34,59 @@
 }
 
 .navbar-links a:hover {
-  color: #ff6600; 
+  color: #ff6600;
 }
 
-.navbar-search {
-  position: relative;
+/* Search Wrapper */
+.navbar-search-wrapper {
   display: flex;
   align-items: center;
-  max-width: 300px;
+  gap: 1rem;
 }
 
-.navbar-search input {
-  width: 100%;
-  padding: 0.5rem 2.7rem 0.5rem 1rem; /* right-side padding for icon */
-  border: 2px solid #FEB300;
+/* Search Container */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #feb300;
   border-radius: 8px;
-  font-size: 0.95rem;
-  outline: none;
-  transition: border-color 0.3s ease;
+  padding: 0.3rem 0.5rem;
 }
 
-.navbar-search input:focus {
-  border-color: #FEB300;
-  box-shadow: 0 0 0 2px rgba(254, 179, 0, 0.3);
+/* Icon wrapper = orange circle */
+.search-icon-wrapper {
+  background-color: #feb300;       /* Orange background */
+  border-radius: 8px;              /* Slightly rounded corners */
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-icon {
-  position: absolute;
-  nav-left: 10px;
-  color: #FEB300;
+  color: black;                    /* Black icon */
   width: 18px;
   height: 18px;
-  pointer-events: none;
+}
+
+/* Search icon = black */
+/* Input field = white + clean */
+.navbar-search input {
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 0.95rem;
+  width: 150px;
+  height: 20px;
+}
+
+/* Avatar */
+.navbar-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #feb300;
 }

@@ -1,20 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from './components/navbar';
 import OurServices from './components/our-services';
 import Job from './components/job';
 import { ArrowUpRight } from 'lucide-react';
-import PaginationDots from './components/PaginationDots'; // make sure you have this
 import './handyman.css';
 import img from './assets/handyman.jpg';
 
 const Handyman = () => {
-  const [currentPage, setCurrentPage] = useState(0);
-
-  const pages = [
-    <OurServices key="1" showHeading={false} showDescription={false} showButton={false} />,
-    <OurServices key="2" showHeading={false} showDescription={false} showButton={false} />,
-  ];
-
   return (
     <div>
       <section className="handyman">
@@ -37,15 +29,9 @@ const Handyman = () => {
         <div className="handyman-services">
           <h4>Find your Handyman</h4>
 
-          {/* Show one service page at a time */}
-          {pages[currentPage]}
-
-          {/* Pagination dots */}
-          <PaginationDots
-            totalPages={pages.length}
-            currentPage={currentPage}
-            onPageChange={setCurrentPage}
-          />
+          {/* Just show one OurServices component now */}
+          <OurServices showHeading={false} showDescription={false} showButton={false} />
+           <OurServices showHeading={false} showDescription={false} showButton={false} />
         </div>
       </section>
 

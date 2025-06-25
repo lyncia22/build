@@ -16,15 +16,18 @@ import Login from './pages/log in';
 
 const AppContent = () => {
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage = location.pathname === "/";
 
   return (
     <>
       {!isLoginPage && <Navbar />}
 
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={
+        {/* Login page is now the root route */}
+        <Route path="/" element={<Login />} />
+
+        {/* Home route is now /home */}
+        <Route path="/home" element={
           <>
             <Hero />
             <ExperienceSection />
@@ -34,6 +37,7 @@ const AppContent = () => {
             <Job />
           </>
         } />
+
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/handyman" element={<Handyman />} />
         <Route path="/companies" element={<Companies />} />

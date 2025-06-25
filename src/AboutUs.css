@@ -173,13 +173,15 @@
 
 .solid-shape {
   width: 210px;
-  height: 80px;
+  height: 60px;
   background-color: white;
-  border-radius: 0 0 20px 0; /* Only bottom-right corner rounded */
+  border-radius: 20px 0 20px 0; 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  position: relative;
+  top: 27px;
+  left: 10px;
 }
 
 .label-text {

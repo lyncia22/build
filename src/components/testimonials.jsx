@@ -64,12 +64,14 @@ const Testimonials = () => {
               <p className="testimonial-text">“{item.review}”</p>
             </div>
           ))}
-          {/* <button className="learnmore-btn">
-  <span className="learnmore-text">Learnmore</span>
-  <span className="learnmore-arrow-box">
-    <ArrowUpRight size={16} color="black" strokeWidth={2} className="arrow-icon" />
+         <button className="btnOrange">
+  <span className="btnOrange_text">view more</span>
+  <span className="btnOrange_arrowBox">
+    <ArrowUpRight  size={16}/>  {/* your arrow icon */}
   </span>
-</button> */}
+</button>
+
+
         </div>
       </div>
     </section>

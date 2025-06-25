@@ -1,7 +1,7 @@
 import React from 'react';
 import './Meet.css';
 import teamGroup from '../assets/image.png'; // update with your actual image path
-import { ArrowRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const Meet = () => {
   return (
@@ -24,12 +24,13 @@ const Meet = () => {
            
           </div>
         </div>
-        <button className="learnmore-btn">
-  <span className="learnmore-text">Learnmore</span>
-  <span className="learnmore-arrow-box">
-    <ArrowRight size={16} color="black" strokeWidth={2} className="arrow-icon" />
-  </span>
-</button>
+      <button className="btnOutline">
+      <span className="btnOutline_text">Learn More</span>
+      <span className="btnOutline_iconBox">
+        <ArrowUpRight />
+      </span>
+    </button>
+
        
 
       </div>

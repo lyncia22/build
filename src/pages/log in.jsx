@@ -1,24 +1,35 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FaGoogle, FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import {
+  FaGoogle,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaEye,
+  FaEyeSlash
+} from 'react-icons/fa';
+import './Log_in.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);  // <--- Add this!
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Add real login validation (API, etc)
-    navigate('/');  // Redirect to home page on success
+    // TODO: Real auth logic goes here
+    console.log('Remember me:', rememberMe); // just to check for now
+    navigate('/home');  // Redirect to the homepage after login
   };
 
   return (
     <div className="login-page">
       <div className="login-card">
         <div className="login-left">
-          <h2>Welcome Back!</h2>
-          <p>Get started with your BuildLink account.</p>
+          <h2>Welcome Back 👋</h2>
+          <p>Login to continue building with BuildLink.</p>
         </div>
 
         <form className="login-form" onSubmit={handleSubmit}>
@@ -26,66 +37,66 @@ const Login = () => {
           <input
             id="username"
             type="text"
+            placeholder="johndoe"
             value={username}
             onChange={e => setUsername(e.target.value)}
             required
           />
 
           <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            required
-          />
+          <div className="password-wrapper">
+            <input
+              id="password"
+              type={showPassword ? 'text' : 'password'}
+              placeholder="••••••••"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+            />
+            <span
+              className="toggle-password"
+              onClick={() => setShowPassword(!showPassword)}
+              style={{ cursor: 'pointer' }}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
 
-          <button type="submit">Login</button>
+          <div className="login-options">
+            <a href="#">Forgot password?</a>
+          </div>
+
+          {/* Remember Me checkbox */}
+          <div className="remember-me">
+            <label>
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={() => setRememberMe(!rememberMe)}
+              />
+              Remember me
+            </label>
+          </div>
+
+          <button type="submit" className="login-btn">Login</button>
         </form>
-      </div>
 
-      <div className="social-login-section">
-        <p>Or sign in using</p>
-        <div className="social-buttons">
-          <button
-            type="button"
-            className="social-btn google"
-            aria-label="Sign in with Google"
-            onClick={() => alert('Google login clicked')}
-          >
-            <FaGoogle size={24} style={{ marginRight: '10px' }} />
-            Sign in with Google
-          </button>
-
-          <button
-            type="button"
-            className="social-btn facebook"
-            aria-label="Sign in with Facebook"
-            onClick={() => alert('Facebook login clicked')}
-          >
-            <FaFacebookF size={24} style={{ marginRight: '10px' }} />
-            Sign in with Facebook
-          </button>
-
-          <button
-            type="button"
-            className="social-btn twitter"
-            aria-label="Sign in with Twitter"
-            onClick={() => alert('Twitter login clicked')}
-          >
-            <FaTwitter size={24} style={{ marginRight: '10px' }} />
-            Sign in with Twitter
-          </button>
-
-          <button
-            type="button"
-            className="social-btn linkedin"
-            aria-label="Sign in with LinkedIn"
-            onClick={() => alert('LinkedIn login clicked')}
-          >
-            <FaLinkedinIn size={24} style={{ marginRight: '10px' }} />
-            Sign in with LinkedIn
-          </button>
+        <div className="social-login-section">
+          <p>Or sign in with</p>
+          <div className="social-buttons">
+            <button className="social-btn google">
+              <FaGoogle /> Google
+            </button>
+            <button className="social-btn facebook">
+              <FaFacebookF /> Facebook
+            </button>
+            <button className="social-btn twitter">
+              <FaTwitter /> Twitter
+            </button>
+            <button className="social-btn linkedin">
+              <FaLinkedinIn /> LinkedIn
+            </button>
+          </div>
         </div>
       </div>
     </div>

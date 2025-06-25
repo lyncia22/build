@@ -83,37 +83,49 @@
   }
 }
 
-.learnmore-btn {
+.btnOutline {
   display: inline-flex;
   align-items: center;
-  /* gap: 8px; */
-  padding: 0;
-  background: transparent;
-  border: none;
-  cursor: pointer;
   border: 2px solid #FEB300;
   border-radius: 10px;
   background-color: white;
-}
-
-.learnmore-text {
-  padding: 8px 20px;
-  background: white;
-  border-radius: 8px;
-  color: #FEB300;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  height: 36px; /* smaller height */
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  width: 120px; /* Adjusted width for "Learnmore" text */
-  line-height: 100%;
+  width: max-content;
+  min-width: 80px; /* smaller min width */
 }
 
-.learnmore-arrow-box {
+.btnOutline_text {
+  padding: 0 6px; /* way smaller padding */
+  background-color: white;
+  color: #FEB300;
+  font-weight: 600;
+  font-size: 14px; /* smaller font */
+  line-height: 36px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  white-space: nowrap;
+  max-width: 70px; /* very tight */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btnOutline_arrowBox {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
+  width: 30px; /* smaller width */
   height: 36px;
   background: #FEB300;
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.btnOutline_arrowBox svg {
+  color: white;
+  width: 16px;
+  height: 16px;
 }
